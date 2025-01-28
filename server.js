@@ -63,7 +63,7 @@ app.get("/snippets", (req, res) =>{
 });
 
 app.get("/snippets/:id", (req, res) =>{
-    //used .find because I specifically wanted it to be using the id, not just the position in the array which is how I would usually code this
+    //used .find because I specifically wanted it to be using the id, not just the position in the array which is how I would usually code
     const snippet = snippets.find(snip => snip.id == req.params.id);
     res.status(200).json(snippet);
 });
